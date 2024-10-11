@@ -17,6 +17,21 @@ For bare React Native projects, you must ensure that you have [installed and con
 ```
 npm install compass-expo-android-utils
 ```
+# Usage
+```ts
+import {
+    generateRsaKeyPair,
+    generateAesKey,
+    saveStringData,
+    saveBoolData,
+    getStringData,
+    getBoolData,
+    clearData,
+    prepareRequestPayload,
+    parseResponsePayload,
+    isCmtSchemaValid
+} from "compass-expo-android-utils";
+```
 
 # API Documentation
 
@@ -115,9 +130,8 @@ Parameters:
    Handles encryption of the CMT request payload.
 
 Parameters:
-payload (RequestPayload): The payload to prepare.
+- `payload` (RequestPayload): The payload to prepare.
 Returns:
-
 - `Promise<PreparedRequest>`: Resolves with the encrypted request payload.
 
 ```ts
